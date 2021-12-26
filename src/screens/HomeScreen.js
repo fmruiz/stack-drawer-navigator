@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
+import {Button, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from '../theme/appStyles';
 
 const HomeScreen = ({navigation}) => {
@@ -10,6 +10,16 @@ const HomeScreen = ({navigation}) => {
         title="Go to testScreen"
         onPress={() => navigation.navigate('TestScreen')}
       />
+
+      <TouchableOpacity
+        style={{marginTop: 20}}
+        onPress={() =>
+          navigation.navigate('PersonScreen', {
+            name: 'Frank',
+          })
+        }>
+        <Text>Go to Person with TouchableOpacity</Text>
+      </TouchableOpacity>
     </View>
   );
 };
