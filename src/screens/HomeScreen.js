@@ -1,13 +1,14 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
+import {styles} from '../theme/appStyles';
 
 const HomeScreen = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.globalStyles}>
       <Text>HomeScreen</Text>
       <Button
         title="Go to testScreen"
-        onPress={() => navigation.navigate('Test')}
+        onPress={() => navigation.navigate('TestScreen')}
       />
     </View>
   );
